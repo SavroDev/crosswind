@@ -13,7 +13,6 @@ const page: FC<pageProps> = ({}) => {
   async function loginWithGoogle() {
     setIsLoading(true);
     try {
-      throw new Error ('b')
       await signIn('google')
     } catch (error) {
       //error message (ya done goofed up)
@@ -25,9 +24,9 @@ const page: FC<pageProps> = ({}) => {
 
   return (
     <>
-      <div className="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-        <div className="w-full flex flex-col items-center max-w-md space-y-8">
-          <div className="flex flex-col items-center gap-8">
+      <div className="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        <div className="w-full flex flex-col items-center max-w-md space-y-8 border-gray-900 border-2 px-8 py-8 rounded-md">
+          <div className="flex flex-col items-center gap-2">
             logo
             <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
               Sign in to your account
